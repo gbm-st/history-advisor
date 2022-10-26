@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +10,20 @@
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/css.css">
+    <script src="../../logica/fuzzy-min.js"></script>
     <script type="text/javascript" src="../../logica/logica.js"></script>
 </head>
-<body>
+<body onload="reloj()">
     <div>
-        <h1>La Prehistoria</h1>
+        <div class="d-flex justify-content-between">
+            <div style="width: 50%;">
+                <h1>La Prehistoria</h1>
+            </div>
+            <div></div>
+            <div style="width: 10%;" class="d-flex justify-content-between">
+                <p id="tiempo-reloj-1">00:00</p>
+            </div>
+        </div>
         <div>
             <img src="fotos/1.jpg" class="rounded mx-auto d-block img-fluid"  alt="">
         </div>
@@ -69,8 +77,103 @@
         <p>Con el conocimiento del hierro el hombre mejoró notablemente sus herramientas y armas. El dominio de la naturaleza se hizo con menos esfuerzo y la cultura alcanzó un notable desarrollo. Precisamente fueron los hititas los primeros en utilizarlo. Mas tarde fue conocido en Asia Menor y en Europa.</p>
         <p>El uso de este metal tuvo un doble efecto en la humanidad. Por un lado se comenzaron a crear industrias tales como la alfarería y la fabricación de instrumentos de metal. Nació así el comercio. Las poblaciones densas formaron ciudades y se amplía la cultura.</p>
         
-        <!--  González, María y Guzmán, Jorge (2014, 26 de enero). La Prehistoria. Historia Universal. https://mihistoriauniversal.com/prehistoria/prehistoria  --> 
-
     </div>
-    </body>
+    <!--  González, María y Guzmán, Jorge (2014, 26 de enero). La Prehistoria. Historia Universal. https://mihistoriauniversal.com/prehistoria/prehistoria  --> 
+    <div>
+        <div class="d-flex justify-content-between">
+            <div style="width: 50%;">
+                <h1>Conteste las siguientes preguntas para evaluar su conocimiento.</h1>
+            </div>
+            <div></div>
+            <div style="width: 10%;" class="d-flex justify-content-between">
+                <p id="tiempo-reloj-2">00:00</p>
+            </div>
+        </div>
+        <form id="form1">
+            <fieldset>
+            <legend>En este periodo de la prehistoria el hombre vivía en las cavernas o cuevas:</legend>
+            <div>
+                <input type="radio" id="p1" name="." value="Verdadero">
+                <label for="p1">Paleolítico</label>
+        
+                <input type="radio" id="p2" name="." value="Falso">
+                <label for="p2">Neolítico</label>
+        
+                <input type="radio" id="p3" name="." value="Falso">
+                <label for="p3">Edad de los metales</label>
+            </div>
+            <a href="#" onclick="ayuda(1, 1)" class="btn btn-primary">Pista</a>
+            </fieldset>
+        </form>
+        <form id="form2">
+            <fieldset>
+            <legend>¿Cuál fue el primer metal en reemplazar a la piedra?</legend>
+            <div>
+                <input type="radio" id="p4" name="." value="Falso">
+                <label for="p4">Hierro</label>
+        
+                <input type="radio" id="p5" name="." value="Falso">
+                <label for="p5">Bronce</label>
+        
+                <input type="radio" id="p6" name="." value="Verdadero">
+                <label for="p6">Cobre</label>
+            </div>
+            <a href="#" onclick="ayuda(1, 2)" class="btn btn-primary">Pista</a>
+            </fieldset>
+        </form>
+        <form id="form3">
+            <fieldset>
+            <legend>¿En qué periodo el hombre empezó a construir sus primeras viviendas?</legend>
+            <div>
+                <input type="radio" id="p7" name="." value="Falso">
+                <label for="p7">Paleolítico</label>
+        
+                <input type="radio" id="p8" name="." value="Falso">
+                <label for="p8">Edad de los metales</label>
+        
+                <input type="radio" id="p9" name="." value="Verdadero">
+                <label for="p9">Neolítico</label>
+            </div>
+            <a href="#" onclick="ayuda(1, 3)" class="btn btn-primary">Pista</a>
+            </fieldset>
+        </form>
+        <form id="form4">
+            <fieldset>
+            <legend>¿Cuál fue uno de los primeros animales en ser domesticado?</legend>
+            <div>
+                <input type="radio" id="p10" name="." value="Falso">
+                <label for="p10">Gato</label>
+        
+                <input type="radio" id="p11" name="." value="Verdadero">
+                <label for="p11">Oveja</label>
+        
+                <input type="radio" id="p12" name="." value="Falso">
+                <label for="p12">Conejo</label>
+            </div>
+            <a href="#" onclick="ayuda(1, 4)" class="btn btn-primary">Pista</a>
+            </fieldset>
+        </form>
+        <form id="form5">
+            <fieldset>
+            <legend>¿Qué metal mezclado con el cobre produce bronce?</legend>
+            <div>
+                <input type="radio" id="p13" name="." value="Verdadero">
+                <label for="p13">Estaño</label>
+        
+                <input type="radio" id="p14" name="." value="Falso">
+                <label for="p14">Plomo</label>
+        
+                <input type="radio" id="p15" name="." value="Falso">
+                <label for="p15">Hierro</label>
+            </div>
+            <a href="#" onclick="ayuda(1, 5)" class="btn btn-primary">Pista</a>
+            </fieldset>
+        </form>
+        <div></div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success" onclick="obtenerRespuestas(document.getElementById('form1'), document.getElementById('form2'), 
+            document.getElementById('form3'), document.getElementById('form4'), document.getElementById('form5'))">Enviar respuestas</button>
+        </div>
+    </div>
+</body>
 </html>

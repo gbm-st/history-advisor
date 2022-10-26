@@ -6,7 +6,6 @@ var segundos = "";
 var valores = [];
 var verdaderos = 0;
 var falsos = 0;
-var hola;
 
 function obtenerRespuestas(form1, form2, form3, form4, form5) {
     var sizes = form1.length;
@@ -103,7 +102,7 @@ function obtenerRespuestas(form1, form2, form3, form4, form5) {
         // alert(valores[i])
     }
 
-    // alert(falsos + " " + minutosTranscurridos + " " + numeroAyudas);
+    alert(falsos + " " + minutosTranscurridos + " " + numeroAyudas);
     
     var obj = {
         crisp_input: [falsos, minutosTranscurridos, numeroAyudas],
@@ -152,22 +151,30 @@ function obtenerRespuestas(form1, form2, form3, form4, form5) {
         ]
     };
 
-    hola = obj;
+    var fl = new FuzzyLogic();
 
-    document.getElementById("hiddenButton").click();
+    alert(fl.getResult(obj))
+
+    if (fl.getResult(obj) >= 7)
+    {
+        window.location.href = "../guerra_mundial_2/guerra_mundial_2.html";
+    }
+    else if (fl.getResult(obj) <= 3)
+    {
+        window.location.href = "../prehistoria/prehistoria.html";
+    }
+    else 
+    {
+        window.location.href = "../independencia_mexico/independencia_mexico.html";
+    }
 
     // Agarrar errores (falsos), tiempo (minutosTranscurridos), ayudas (numeroAyudas) y pasarlos a fuzzy logic.
     //Falta redirigir en js a otra pagina, las ayudas y el cronometro
     
-    //TimeMe.js/
+    //TimeMe.js
     //howto_js_redirect_webpage
     //how-to-measure-a-time-spent-on-a-page
 };
-
-function mostrarResultado () 
-{
-    alertdocument.getElementById("result")
-}
 
 function reloj(){
     if (minutosTranscurridos.toString().length == 1)
@@ -187,7 +194,8 @@ function reloj(){
         segundos = segundosTranscurridos;
     }
 
-    document.getElementById("tiempo-reloj").innerText = minutos + ":" + segundos;
+    document.getElementById("tiempo-reloj-1").innerText = minutos + ":" + segundos;
+    document.getElementById("tiempo-reloj-2").innerText = minutos + ":" + segundos;
 
     segundosTranscurridos += 1;
 
@@ -203,27 +211,27 @@ function reloj(){
 function ayuda(dificultad, pregunta) {
     //Preguntas Prehistoria
     if (dificultad == 1 && pregunta == 1) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ');
+        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C.');
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 1 && pregunta == 2) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Su uso se difundió rápidamente debido a su fácil obtención y a su gran maleabilidad')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 1 && pregunta == 3) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Comprende desde los 10 mil años a.C. hasta los 3 mil años a.C.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 1 && pregunta == 4) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Se domesticaron algunos animales con los que se organizó la ganadería actual')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 1 && pregunta == 5) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Con esta nueva aleación se comenzó a fabricar nuevas armas, ornamentos y utensilios.')
         numeroAyudas += 1;
         return;
     }

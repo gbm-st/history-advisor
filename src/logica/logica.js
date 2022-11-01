@@ -238,54 +238,54 @@ function ayuda(dificultad, pregunta) {
 
     //Preguntas Independencia
     if (dificultad == 2 && pregunta == 1) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Hidalgo apeló al apoyo popular y, en la misa, profirió el famoso Grito de Dolores.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 2 && pregunta == 2) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Se une al Padre Miguel Hidalgo y levanta un ejército popular, pero disciplinado, móvil y aguerrido.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 2 && pregunta == 3) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Entró a formar parte de la conspiración de la Profesa, cuya finalidad consistía en impedir el restablecimiento de la Constitución española de Cádiz. ')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 2 && pregunta == 4) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Se organiza una regencia de cinco miembros, presidida por Iturbide.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 2 && pregunta == 5) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Tras un período de inestabilidad, Santa-Anna asumió el mando en abril de 1833 y dominó el país durante veinte años.')
         numeroAyudas += 1;
         return;
     }
 
     //Preguntas Segunda Guerra Mundial
     if (dificultad == 3 && pregunta == 1) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('El Reino Unido o Gran Bretaña permitió el acceso nazi al poder en Alemania sin defender a la Republica Demo Liberal de Weimar.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 3 && pregunta == 2) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Ese mismo año Alemania se retira de la Liga de Naciones.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 3 && pregunta == 3) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Las potencias del Eje impulsaron políticas anexionistas.')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 3 && pregunta == 4) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Consistió en el desembarco de Normandia (Francia).')
         numeroAyudas += 1;
         return;
     }
     if (dificultad == 3 && pregunta == 5) {
-        alert('Comprende desde los orígenes de la historia humana hasta los 10 mil años a.C. ')
+        alert('Lograron muchos una independencia política mas no económica.')
         numeroAyudas += 1;
         return;
     }

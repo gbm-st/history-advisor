@@ -102,7 +102,7 @@ function obtenerRespuestas(form1, form2, form3, form4, form5) {
         // alert(valores[i])
     }
 
-    alert(falsos + " " + minutosTranscurridos + " " + numeroAyudas);
+    alert("Errores: " + falsos + " " + ", Tiempo (Minutos): " + minutosTranscurridos + " " + ", Ayudas: " + numeroAyudas);
     
     var obj = {
         crisp_input: [falsos, minutosTranscurridos, numeroAyudas],
@@ -153,7 +153,7 @@ function obtenerRespuestas(form1, form2, form3, form4, form5) {
 
     var fl = new FuzzyLogic();
 
-    alert(fl.getResult(obj))
+    alert("Resultados: " + fl.getResult(obj))
 
     if (fl.getResult(obj) >= 7)
     {
